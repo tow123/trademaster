@@ -1,0 +1,35 @@
+{
+  "name": "trademaster",
+  "version": "1.0.0",
+  "description": "crypto and stock viewer",
+  "main": "index.js",
+  "scripts": {
+     "server": "node server.js",
+     "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+     "client": "node scripts/start-client.js",
+     "dev": "concurrently \"nodemon server.js\" \"npm run client\"",
+     "build": "node scripts/build.js",
+     "seed": "node scripts/seedDB.js",
+     "test": "echo \"Error: no test specified\" && exit 1",
+     "installDeps": "yarn && cd client && yarn"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tow123/trademaster.git"
+  },
+  "author": "trademaster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tow123/trademaster/issues"
+  },
+
+  "homepage": "https://github.com/tow123/trademaster#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "mongoose": "^5.0.7",
+    "passport": "^0.4.0",
+    "passport-google": "^0.3.0",
+    "passport-google-oauth20": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}
